@@ -18,9 +18,11 @@
     </script>
     <script type="text/babel">
       // Our code will go here
-      function App() {
+      function App(props) {
+            console.log(props);
             return (
                 <div>
+                {props.children}
                 <h1>Hello, everyone!</h1>
                 <p>We think,</p>
                 <ul>
@@ -28,21 +30,19 @@
                     <li>is</li>
                     <li>brilliant!</li>
                 </ul>
-                </div>
-            );
-        };  
-        ReactDOM.render(
-            <div>
-                <h1>Hello, world!</h1>
-                <p>How are you today?</p>
-                <h2>Look what React can do!</h2>
-                <App />
-                
                 <a href='https://thinkful.com' target='_blank'>
                     Thinkful
                 </a>
+                </div>
+            );
+        };  
 
-            </div>,
+        ReactDOM.render(
+                <App className="newClass">
+                    <h1 className="myProp">Title</h1>
+                    <h2 className="prop2">Title 2</h2>
+                    <span className="thing1">Thing 1</span>
+                </App>,
             document.querySelector('#application-root')
         );      
     </script>
