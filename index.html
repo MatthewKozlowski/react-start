@@ -19,32 +19,20 @@
     <script type="text/babel">
       // Our code will go here
       function App(props) {
-            console.log(props);
-            return (
-                <div>
-                {props.children}
-                <h1>Hello, everyone!</h1>
-                <p>We think,</p>
-                <ul>
-                    <li>React</li>
-                    <li>is</li>
-                    <li>brilliant!</li>
-                </ul>
-                <a href='https://thinkful.com' target='_blank'>
-                    Thinkful
-                </a>
-                </div>
-            );
-        };  
+        console.log(props)
+        return (
+          <header>
+            {props.children}
+          </header>
+        );
+      }
 
-        ReactDOM.render(
-                <App className="newClass">
-                    <h1 className="myProp">Title</h1>
-                    <h2 className="prop2">Title 2</h2>
-                    <span className="thing1">Thing 1</span>
-                </App>,
-            document.querySelector('#application-root')
-        );      
+ReactDOM.render(
+  <App className='my-class'>
+    <h1>Current Page Title</h1>
+  </App>,
+  document.querySelector('#application-root')
+);     
     </script>
 </body>
 </html>
